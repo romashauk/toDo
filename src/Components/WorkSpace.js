@@ -7,12 +7,13 @@ export default class WorkSpace extends Component {
     minute: new Date().getMinutes(),
     second: new Date().getSeconds(),
     show: false,
+    animation: false,
   };
   greetings = () => {
     const { hours } = this.state;
-    if (hours > 5 && hours < 11) {
+    if (hours > 5 && hours < 12) {
       return 'Good morning';
-    } else if (hours > 11 && hours < 19) {
+    } else if (hours > 12 && hours < 18) {
       return 'Good afternoon';
     } else {
       return 'Good evening';
@@ -34,10 +35,15 @@ export default class WorkSpace extends Component {
       show: !this.state.show,
     });
   };
+  handleOver = e => {
+    this.setState({
+      animation: true,
+    });
+  };
   render() {
-    const { hours, minute, second, show } = this.state;
+    const { hours, minute, second, show, animation } = this.state;
     return (
-      <div className="workSpace">
+      <div className="workSpace" onMouseOver={this.handleOver}>
         <div className="container">
           <h1 className="workSpace__time">
             {hours < '10' ? 0 : null}
@@ -48,7 +54,9 @@ export default class WorkSpace extends Component {
           <h2 className="workSpace__logan">
             {this.greetings()}, {this.props.name}
           </h2>
-
+          <div className="animation-container">
+            <div className={animation ? 'animation-on' : 'animation-off'} />
+          </div>
           <List />
         </div>
       </div>
