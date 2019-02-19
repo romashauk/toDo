@@ -1,6 +1,6 @@
 .workSpace {
   height: 100vh;
-  background-image: url(../universe.jpg);
+  background-image: url(../Components/WorkSpace/universe.jpg);
   background-size: cover;
   position: absolute;
   width: 100%;
@@ -25,6 +25,7 @@
     margin-top: 30px;
     width: 100%;
     text-align: center;
+    font-weight: 700;
   }
   &__list {
     width: 400px;

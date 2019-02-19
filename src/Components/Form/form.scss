@@ -21,8 +21,13 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   &__button {
-    height: 25%;
+    height: 50px;
     color: #fff;
     background: #222831;
     padding: 0 10px;

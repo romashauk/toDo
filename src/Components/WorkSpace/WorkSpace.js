@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import List from './List';
+import List from '../List/List';
 
 export default class WorkSpace extends Component {
   state = {
@@ -41,7 +41,7 @@ export default class WorkSpace extends Component {
     });
   };
   render() {
-    const { hours, minute, second, show, animation } = this.state;
+    const { hours, minute, second, animation } = this.state;
     return (
       <div className="workSpace" onMouseOver={this.handleOver}>
         <div className="container">

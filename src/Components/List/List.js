@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import TextField from 'material-ui/TextField';
 import CloseButton from 'material-ui/svg-icons/navigation/close';
 
 export default class List extends Component {
@@ -18,16 +17,15 @@ export default class List extends Component {
       alert('Please write smth');
       return;
     }
-    let { items, value, counter } = this.state;
+    const { items, value, counter } = this.state;
     this.setState({
-      counter: this.state.counter + 1,
+      counter: counter + 1,
       value: '',
       items: [
         ...items,
         {
           id: counter,
           title: value,
-          value: '',
         },
       ],
     });
@@ -40,7 +38,7 @@ export default class List extends Component {
     });
   };
   render() {
-    const { items } = this.state;
+    const { items, value } = this.state;
     return (
       <div className="workSpace__list">
         <h3 className="workSpace__title">
@@ -51,7 +49,7 @@ export default class List extends Component {
           )}
         </h3>
         <input
-          value={this.state.value}
+          value={value}
           onChange={this.handleChange}
           type="text"
           placeholder="new to do"
@@ -62,7 +60,7 @@ export default class List extends Component {
           Add
         </button>
         <ul>
-          {this.state.items.map(item => (
+          {items.map(item => (
             <div className="items__container">
               <li className="workSpace__item" key={item.id} id={item.id}>
                 {item.title}
