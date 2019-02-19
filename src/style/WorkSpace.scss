@@ -1,0 +1,86 @@
+.workSpace {
+  height: 100vh;
+  background-image: url(../universe.jpg);
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  .container {
+    padding: 200px 200px;
+    font-family: 'Monserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__time {
+    font-size: 70px;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  &__logan {
+    font-size: 80px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 30px;
+    width: 100%;
+  }
+  &__list {
+    width: 400px;
+    padding: 40px 20px;
+    background: rgba(0, 20, 10, 0.7);
+    border-radius: 1rem;
+    font-family: 'Monserrat', sans-serif;
+    position: absolute;
+    top: 60vh;
+    left: 50vw;
+    overflow: auto;
+    max-height: 200px;
+  }
+  &__title {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  &__button {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    transition: all 0.5s;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 10px;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+  &__field {
+    background: transparent;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    font-size: 20px;
+    height: 35px;
+    width: 80%;
+  }
+  &__item {
+    color: white;
+    font-size: 20px;
+    width: 80%;
+    height: 30px;
+    margin-top: 20px;
+    position: relative;
+  }
+  .list__btn {
+    position: absolute;
+    left: 100%;
+    color: white !important;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
