@@ -41,7 +41,7 @@ export default class WorkSpace extends Component {
     });
   };
   render() {
-    const { hours, minute, second, animation } = this.state;
+    const { hours, minute, second, show, animation } = this.state;
     return (
       <div className="workSpace" onMouseOver={this.handleOver}>
         <div className="container">
@@ -57,7 +57,12 @@ export default class WorkSpace extends Component {
           <div className="animation-container">
             <div className={animation ? 'animation-on' : 'animation-off'} />
           </div>
-          <List />
+          <button className="workSpace__show" onClick={this.showPlans}>
+            {!show ? 'Show To Do' : 'Hide To Do'}
+          </button>
+          <div className={!show ? 'hidden' : ''}>
+            <List />
+          </div>
         </div>
       </div>
     );
