@@ -5,7 +5,6 @@ import * as todoActions from '../Redux/actions';
 
 class List extends Component {
   state = {
-    counter: 0,
     value: '',
   };
   handleChange = e => {
