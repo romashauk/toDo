@@ -40,10 +40,26 @@
     overflow: auto;
     max-height: 200px;
   }
+  .active {
+    text-decoration: line-through red;
+  }
+  .list__field {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: white;
+  }
   &__title {
     color: white;
     font-size: 30px;
     margin-bottom: 20px;
+  }
+  .items__save {
+    color: white !important;
+  }
+  .items__container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
   }
   &__button {
     background: transparent;
@@ -68,17 +84,23 @@
     height: 35px;
     width: 80%;
   }
+  .items__icon {
+    color: white !important;
+    flex-basis: 10%;
+  }
+  .title__container {
+    flex-basis: 70%;
+  }
   &__item {
     color: white;
     font-size: 20px;
-    width: 80%;
-    height: 30px;
-    margin-top: 20px;
-    position: relative;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    margin-left: 10px;
   }
   .list__btn {
-    position: absolute;
-    left: 100%;
     color: white !important;
     cursor: pointer;
     transition: 0.5s;

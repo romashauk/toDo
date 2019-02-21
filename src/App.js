@@ -2,11 +2,10 @@ import React, { Component, Fragment } from 'react';
 import './style/App.scss';
 import { Route, Switch } from 'react-router-dom';
 
-import Form from './Components/Form/Form';
+import Form from './Components/SignIn/SignIn';
 import WorkSpace from './Components/WorkSpace/WorkSpace';
 
 import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
 
 class App extends Component {
   state = {

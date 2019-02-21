@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import { Link } from 'react-router-dom';
 

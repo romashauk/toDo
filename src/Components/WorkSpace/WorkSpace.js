@@ -46,9 +46,9 @@ export default class WorkSpace extends Component {
       <div className="workSpace" onMouseOver={this.handleOver}>
         <div className="container">
           <h1 className="workSpace__time">
-            {hours < '10' ? 0 : null}
-            {hours}:{minute < '10' ? 0 : null}
-            {minute}:{second < '10' ? 0 : null}
+            {hours < 10 ? 0 : null}
+            {hours}:{minute < 10 ? 0 : null}
+            {minute}:{second < 10 ? 0 : null}
             {second}
           </h1>
           <h2 className="workSpace__logan">
@@ -60,9 +60,7 @@ export default class WorkSpace extends Component {
           <button className="workSpace__show" onClick={this.showPlans}>
             {!show ? 'Show To Do' : 'Hide To Do'}
           </button>
-          <div className={!show ? 'hidden' : ''}>
-            <List />
-          </div>
+          {show && <List />}
         </div>
       </div>
     );
